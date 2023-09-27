@@ -34,7 +34,7 @@ const achievementsList = [
   },
 ];
 
-const Legals = () => {
+export default function Legals() {
   return (
     <main className="flex min-h-screen flex-col w-full">
       <Navbar />
@@ -146,6 +146,4 @@ const Legals = () => {
       <Footer />
     </main>
   );
-};
-
-export default Legals;
+}
