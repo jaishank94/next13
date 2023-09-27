@@ -96,7 +96,7 @@ const PricingSection = () => {
               </div>
               <div className="px-5 pt-4 pb-5">
                 <div className="text-xl text-white font-normal mb-4">
-                  What's included?
+                  {" What's included?"}
                 </div>
 
                 <ul>
@@ -182,7 +182,7 @@ const PricingSection = () => {
               </div>
               <div className="px-5 pt-4 pb-5">
                 <div className="text-xl text-white font-normal mb-4">
-                  What's included?
+                  {"What's included?"}
                 </div>
 
                 <ul>
