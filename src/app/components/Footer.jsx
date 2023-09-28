@@ -77,7 +77,7 @@ const Footer = () => {
 
         <hr className="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr>
         <div className="w-full flex flex-row justify-center ">
-          <span className="text-md font-light">
+          <span className="text-md font-light text-gray-300">
             © {new Date().getFullYear()} CLST All rights reserved
           </span>
         </div>

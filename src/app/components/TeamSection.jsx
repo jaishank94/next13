@@ -155,7 +155,7 @@ const TeamSection = () => {
               space.
             </p> */}
           </div>
-          <div className="z-10 mt-12 md:mt-0">
+          <div className=" mt-12 md:mt-0">
             <form className="flex flex-col">
               <div className="mb-6">
                 <input
