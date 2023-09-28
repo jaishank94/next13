@@ -82,11 +82,11 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 px-4 md:px-16 pb-12 pt-24" id="team">
+    <section className="bg-white px-4 lg:px-16 pb-12 pt-24" id="team">
       <div className="pt-4 md:pt-16">
         {/* <hr className="w-16 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10"></hr> */}
 
-        <h2 className="pt-2 mb-4 flex text-black text-4xl pl-4 md:pl-16 md:text-6xl font-medium">
+        <h2 className="pt-2 mb-4 flex text-black text-4xl pl-4 lg:pl-16 lg:text-6xl font-medium">
           Our Team
         </h2>
       </div>
@@ -95,9 +95,9 @@ const TeamSection = () => {
           return (
             <div
               key={index}
-              className="max-w-sm group cursor-default transition duration-200 ease-in transform sm:hover:scale-105 bg-white m-2 border border-gray-200 shadow-md"
+              className="max-w-xl group cursor-default  bg-white m-2 border border-gray-200 shadow-md"
             >
-              <div className="w-full flex justify-center items-center pt-4">
+              <div className="w-full flex justify-center items-center pt-4 transition duration-200 ease-in transform sm:hover:scale-105">
                 <Image
                   src={team.value}
                   alt="hero image"

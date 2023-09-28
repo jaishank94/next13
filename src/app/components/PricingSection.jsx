@@ -52,13 +52,13 @@ const PricingSection = () => {
 
   return (
     <section
-      className="flex flex-col antialiased text-gray-600 min-h-screen p-4 bg-white"
+      className="flex flex-col antialiased text-gray-600 min-h-screen p-4 bg-[#f6f6f6]"
       id="services"
     >
-      <div className="md:pt-32 h-full">
-        <div className="mt-8 px-4 md:px-24 mx-auto" x-data="{ annual: true }">
-          {/* <hr className="w-48 h-0.5  my-4 bg-black border-0 rounded md:my-10"></hr> */}
-          <h2 className="text-4xl md:pl-0 md:text-6xl text-black font-medium mb-12">
+      <div className="lg:pt-32 h-full">
+        <div className="mt-8 px-4 lg:px-24 mx-auto" x-data="{ annual: true }">
+          {/* <hr className="w-48 h-0.5  my-4 bg-black border-0 rounded lg:my-10"></hr> */}
+          <h2 className="text-4xl lg:pl-0 md:text-6xl text-black font-medium mb-12">
             Our Services
           </h2>
 

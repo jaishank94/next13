@@ -51,9 +51,9 @@ const MissionSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 px-4 md:px-16 pb-24" id="mission">
+    <section className="bg-white px-4 md:px-16 pb-24" id="mission">
       <div className=" text-white py-28">
-        <div className="pt-12 md:pt-24 flex flex-col px-8 md:px-16 text-4xl font-medium">
+        <div className="pt-12 md:pt-24 flex flex-col px-4 lg:px-16 text-4xl font-medium">
           {/* <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr> */}
           <h2 className="text-4xl md:text-6xl text-black font-medium">
             Mission

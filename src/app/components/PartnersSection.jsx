@@ -58,7 +58,7 @@ const partnersList = [
 const PartnersSection = () => {
   return (
     <div className="bg-white px-8 md:px-24">
-      <div className="py-12 px-16 flex flex-col sm:flex-row items-center justify-between">
+      <div className="py-12 lg:px-16 flex flex-col sm:flex-row items-center justify-between">
         {partnersList.map((achievement, index) => {
           return (
             <div

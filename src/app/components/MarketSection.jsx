@@ -51,8 +51,8 @@ const MarketSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 px-4 md:px-16 pb-24 pt-24" id="markets">
-      <h2 className="pt-24 mb-4 flex text-black text-4xl pl-4 md:pl-14 md:text-6xl font-medium">
+    <section className="bg-[#f6f6f6] px-4 md:px-16 md:pb-24 pt-24" id="markets">
+      <h2 className="pt-24 mb-4 flex text-black text-4xl pl-4 lg:pl-14 md:text-6xl font-medium">
         Markets
       </h2>
       {/* <hr className="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
@@ -100,10 +100,10 @@ const MarketSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
-          <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
+          <h2 className="text-xl md:text-2xl font-medium text-black mb-4">
             Private Credit
           </h2>
-          <p className="text-sm md:text-base tracking-wide text-black font-light text-md text-gray-700 lg:text-lg">
+          <p className="text-md tracking-wide text-gray-600 font-light">
             CLST serves as a catalyst for private credit lending opportunities.
             Through rigorous underwriting services and a deep understanding of
             risk dynamics, we offer curated private credit channels that are
@@ -113,10 +113,10 @@ const MarketSection = () => {
         <div className="mt-12 md:mt-4 md:mt-0 text-left flex flex-col h-full">
           <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
-          <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
+          <h2 className="text-xl md:text-2xl font-medium text-black mb-4">
             Crypto Money Markets
           </h2>
-          <p className="text-sm md:text-base tracking-wide text-black font-light text-md text-gray-700 lg:text-lg">
+          <p className="text-md tracking-wide text-gray-600 font-light">
             Seamlessly deploy digital capital into curated credit channels,
             managed to mitigate risk. Drive strategic growth with favorable
             yields and streamlined operations, bridging the gap between

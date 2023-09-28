@@ -14,7 +14,7 @@ import MissionSection from "./components/MissionSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col w-full">
+    <main className="flex min-h-screen max-w-8xl flex-col w-full">
       <Navbar />
       <div className="">
         <HeroSection />
