@@ -49,7 +49,10 @@ const HeroSection = () => {
             >
               Get Started {"->"}
             </Link> */}
-            <Link href="/" className="px-1 inline-block py-4 w-full sm:w-fit ">
+            <Link
+              href="/#requestDemo"
+              className="px-1 inline-block py-4 w-full sm:w-fit "
+            >
               <span className="block border-2 text-white border-white hover:bg-blue-600 hover:border-blue-600 rounded-full px-10 py-4">
                 Request Demo {"->"}
               </span>

@@ -37,6 +37,22 @@ const partnersList = [
     metric: "Years",
     value: "/images/partners-logo-6.png",
   },
+  {
+    metric: "Years",
+    value: "/images/partners-logo-7.png",
+  },
+  {
+    metric: "Years",
+    value: "/images/partners-logo-8.png",
+  },
+  {
+    metric: "Years",
+    value: "/images/partners-logo-9.png",
+  },
+  {
+    metric: "Years",
+    value: "/images/partners-logo-10.png",
+  },
 ];
 
 const PartnersSection = () => {
