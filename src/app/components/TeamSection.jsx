@@ -141,19 +141,16 @@ const TeamSection = () => {
           );
         })}
       </div>
-      <div className="bg-black text-white py-12" id="requestDemo">
+      <div className="bg-[#f6f6f6] text-white py-12" id="requestDemo">
         <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <div>
             {/* <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr> */}
-            <h2 className="text-4xl md:text-6xl font-medium">Request Demo</h2>
-            {/* <p className="text-sm md:text-base font-light text-white lg:text-lg py-16 border-b-2 border-gray-500">
-              CLST connects institutional lenders and borrowers via curated,
-              risk-managed credit channels, enabling the pursuit of
-              yield-generating opportunities. As a peer-to-peer agent lending
-              marketplace, CLST provides the tools and services to eliminate the
-              information gap between lenders and borrowers in the digital asset
-              space.
-            </p> */}
+            <h2 className="text-4xl md:text-6xl text-black font-medium">
+              Request Demo
+            </h2>
+            <p className="text-sm md:text-base font-light text-black lg:text-lg py-16 border-b-2 border-gray-500">
+              The Institutional Credit Liquidity Hub For Digital Assets
+            </p>
           </div>
           <div className=" mt-12 md:mt-0">
             <form className="flex flex-col">
@@ -162,7 +159,7 @@ const TeamSection = () => {
                   type="text"
                   id="email"
                   required
-                  className="bg-black border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-xl block w-full p-2.5"
+                  className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Name"
                 />
               </div>
@@ -171,7 +168,7 @@ const TeamSection = () => {
                   type="email"
                   id="subject"
                   required
-                  className="bg-black border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-xl block w-full p-2.5"
+                  className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Email"
                 />
               </div>
@@ -180,7 +177,7 @@ const TeamSection = () => {
                   type="text"
                   id="organisation"
                   required
-                  className="bg-black border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-xl block w-full p-2.5"
+                  className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Organisation"
                 />
               </div>
@@ -189,7 +186,7 @@ const TeamSection = () => {
                 <textarea
                   name="message"
                   id="message"
-                  className="bg-black border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-xl block w-full p-2.5"
+                  className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Let's talk about..."
                 />
               </div>
