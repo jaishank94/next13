@@ -83,10 +83,10 @@ const TeamSection = () => {
 
   return (
     <section className="bg-gray-100 px-4 md:px-16 pb-12 pt-24" id="team">
-      <div className="pt-16">
+      <div className="pt-4 md:pt-16">
         {/* <hr className="w-16 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10"></hr> */}
 
-        <h2 className="pt-2 mb-4 flex text-black text-6xl font-medium pl-16">
+        <h2 className="pt-2 mb-4 flex text-black text-4xl pl-4 md:pl-16 md:text-6xl font-medium">
           Team
         </h2>
       </div>

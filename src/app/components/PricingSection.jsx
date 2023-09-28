@@ -55,10 +55,12 @@ const PricingSection = () => {
       className="flex flex-col antialiased text-gray-600 min-h-screen p-4 bg-white"
       id="services"
     >
-      <div className="pt-24 h-full">
-        <div className="mt-8 px-24 mx-auto" x-data="{ annual: true }">
+      <div className="md:pt-24 h-full">
+        <div className="mt-8 px-4 md:px-24 mx-auto" x-data="{ annual: true }">
           {/* <hr className="w-48 h-0.5  my-4 bg-black border-0 rounded md:my-10"></hr> */}
-          <h2 className="text-6xl text-black font-medium mb-12">Services</h2>
+          <h2 className="text-4xl md:pl-14 md:text-6xl text-black font-medium mb-12">
+            Services
+          </h2>
 
           <div className="py-12 grid grid-cols-12 gap-6">
             <div className="relative col-span-full md:col-span-6 bg-white shadow-md rounded-sm border border-slate-800">

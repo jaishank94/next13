@@ -52,7 +52,7 @@ const MarketSection = () => {
 
   return (
     <section className="bg-gray-100 px-4 md:px-16 pb-24 pt-24" id="markets">
-      <h2 className="pt-24 mb-4 flex text-black text-4xl pl-14 md:text-6xl font-medium">
+      <h2 className="pt-24 mb-4 flex text-black text-4xl pl-4 md:pl-14 md:text-6xl font-medium">
         Markets
       </h2>
       {/* <hr className="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
