@@ -71,12 +71,12 @@ const EmailSection = () => {
         <div className="pt-4 flex flex-col md:flex-row justify-between">
           <div className="">
             {/* <span className="text-gray-400 uppercase font-semibold">Legal</span> */}
-            <ul className="flex flex-row">
+            <ul className="flex flex-row gap-4">
               <li className="text-md cursor-pointer font-light">
                 <Link
                   // href={"/legals/#privacy"}
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
+                  // className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Privacy Policy
                 </Link>
@@ -85,7 +85,7 @@ const EmailSection = () => {
                 <Link
                   // href={"/legals/#cookie"}
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
+                  // className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Cookie Policy
                 </Link>
@@ -94,7 +94,7 @@ const EmailSection = () => {
                 <Link
                   // href={"/legals/#termsandconditions"}
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
+                  // className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Terms and Conditions
                 </Link>
