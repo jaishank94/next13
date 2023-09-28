@@ -103,7 +103,7 @@ const EmailSection = () => {
               Company
             </span> */}
 
-            <div className="flex flex-row items-center justify-end ">
+            <div className="flex flex-row items-center justify-center">
               <ul className="flex p-4 md:p-0 flex-row md:space-x-8 mt-0">
                 {navLinks.map((link, index) => (
                   <li key={index}>
