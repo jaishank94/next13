@@ -110,7 +110,7 @@ const MarketSection = () => {
             aligned with our commitment to transparency and value creation.
           </p>
         </div>
-        <div className="mt-12 md:mt-4 md:mt-0 text-left flex flex-col h-full">
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
           <h2 className="text-xl md:text-2xl font-medium text-black mb-4">
