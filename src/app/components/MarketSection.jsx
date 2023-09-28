@@ -104,10 +104,10 @@ const MarketSection = () => {
             Private Credit
           </h2>
           <p className="text-sm md:text-base tracking-wide text-black font-light text-md text-gray-700 lg:text-lg">
-            CLST Serves As A Catalyst For Private Credit Lending Opportunities.
-            Through Rigorous Underwriting Services And A Deep Understanding Of
-            Risk Dynamics, We Offer Curated Private Credit Channels That Are
-            Aligned With Our Commitment To Transparency And Value Creation.
+            CLST serves as a catalyst for private credit lending opportunities.
+            Through rigorous underwriting services and a deep understanding of
+            risk dynamics, we offer curated private credit channels that are
+            aligned with our commitment to transparency and value creation.
           </p>
         </div>
         <div className="mt-12 md:mt-4 md:mt-0 text-left flex flex-col h-full">
@@ -117,11 +117,11 @@ const MarketSection = () => {
             Crypto Money Markets
           </h2>
           <p className="text-sm md:text-base tracking-wide text-black font-light text-md text-gray-700 lg:text-lg">
-            Seamlessly Deploy Digital Capital Into Curated Credit Channels,
-            Managed To Mitigate Risk. Drive Strategic Growth With Favorable
-            Yields And Streamlined Operations, Bridging The Gap Between
-            Institutional Borrowers And Lenders In The Crypto Financial
-            Landscape.
+            Seamlessly deploy digital capital into curated credit channels,
+            managed to mitigate risk. Drive strategic growth with favorable
+            yields and streamlined operations, bridging the gap between
+            institutional borrowers and lenders in the crypto financial
+            landscape.
           </p>
         </div>
       </div>
