@@ -52,7 +52,7 @@ const PricingSection = () => {
 
   return (
     <section
-      className="flex flex-col justify-center antialiased text-gray-600 min-h-screen p-4 bg-black"
+      className="mt-12 flex flex-col justify-center antialiased text-gray-600 min-h-screen p-4 bg-black"
       id="services"
     >
       <div className="h-full">
