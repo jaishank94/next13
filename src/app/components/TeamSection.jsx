@@ -146,7 +146,7 @@ const TeamSection = () => {
           <div>
             {/* <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr> */}
             <h2 className="text-4xl md:text-6xl text-black font-medium">
-              Request Demo
+              Request Access
             </h2>
             <p className="text-sm md:text-base font-light text-black lg:text-lg py-16">
               <span className="font-normal">CLST</span>: The Institutional
