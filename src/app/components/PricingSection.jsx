@@ -78,7 +78,9 @@ const PricingSection = () => {
                       <path d="M12 17a.833.833 0 01-.833-.833 3.333 3.333 0 00-3.334-3.334.833.833 0 110-1.666 3.333 3.333 0 003.334-3.334.833.833 0 111.666 0 3.333 3.333 0 003.334 3.334.833.833 0 110 1.666 3.333 3.333 0 00-3.334 3.334c0 .46-.373.833-.833.833z" />
                     </svg>
                   </div>
-                  <h3 className="text-3xl text-black font-semibold">Self</h3>
+                  <h3 className="text-3xl text-black font-semibold">
+                    Self Service
+                  </h3>
                 </header>
                 {/* <div className="text-sm mb-2">
                   Ideal for individuals that need a custom solution with custom
@@ -155,7 +157,9 @@ const PricingSection = () => {
                       <path d="M12 17a.833.833 0 01-.833-.833 3.333 3.333 0 00-3.334-3.334.833.833 0 110-1.666 3.333 3.333 0 003.334-3.334.833.833 0 111.666 0 3.333 3.333 0 003.334 3.334.833.833 0 110 1.666 3.333 3.333 0 00-3.334 3.334c0 .46-.373.833-.833.833z" />
                     </svg>
                   </div>
-                  <h3 className="text-3xl text-black font-semibold">Managed</h3>
+                  <h3 className="text-3xl text-black font-semibold">
+                    Managed Service
+                  </h3>
                 </header>
                 {/* <div className="text-sm mb-2">
                   Ideal for individuals that need a custom solution with custom
