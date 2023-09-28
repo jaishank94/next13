@@ -51,11 +51,14 @@ const PricingSection = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center antialiased text-gray-600 min-h-screen p-4 bg-black">
+    <section
+      className="flex flex-col justify-center antialiased text-gray-600 min-h-screen p-4 bg-black"
+      id="services"
+    >
       <div className="h-full">
         <div className="mt-8 max-w-5xl mx-auto" x-data="{ annual: true }">
           <h2 className="text-6xl text-black font-medium text-center text-white mb-12">
-            Awesome Services
+            Our Services
           </h2>
           <hr className="w-48 h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
 
