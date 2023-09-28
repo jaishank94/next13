@@ -84,10 +84,10 @@ const TeamSection = () => {
   return (
     <section className="bg-gray-100 px-4 md:px-16 pb-12" id="team">
       <div className="pt-16">
-        <hr className="w-48 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10"></hr>
+        <hr className="w-16 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10"></hr>
 
-        <h2 className="pt-2 mb-4 flex justify-center text-black text-4xl font-medium">
-          The amazing team behind our company
+        <h2 className="pt-2 mb-4 flex justify-center text-black text-6xl font-medium ">
+          Team
         </h2>
       </div>
       <div className="md:grid md:grid-cols-3 gap-2 items-center py-8 px-4 xl:gap-4 sm:py-16 xl:px-16">
