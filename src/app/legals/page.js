@@ -42,7 +42,11 @@ export default function Legals() {
         <section className="bg-gray-100 px-4 md:px-16 py-24" id="markets">
           {/* <hr className="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
           <div className="px-4 md:px-16">
-            <Link rel="stylesheet" href="/" className="hover:underline">
+            <Link
+              rel="stylesheet"
+              href="/"
+              className="text-black hover:underline"
+            >
               {"<-"} Back to home
             </Link>
           </div>
