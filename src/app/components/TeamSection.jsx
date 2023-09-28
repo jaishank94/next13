@@ -149,7 +149,7 @@ const TeamSection = () => {
               Request Demo
             </h2>
             <p className="text-sm md:text-base font-light text-black lg:text-lg py-16 border-b-2 border-gray-500">
-              The Institutional Credit Liquidity Hub For Digital Assets
+              CLST: The Institutional Credit Liquidity Hub For Digital Assets
             </p>
           </div>
           <div className=" mt-12 md:mt-0">
