@@ -87,7 +87,7 @@ const TeamSection = () => {
         {/* <hr className="w-16 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10"></hr> */}
 
         <h2 className="pt-2 mb-4 flex text-black text-4xl pl-4 md:pl-16 md:text-6xl font-medium">
-          Team
+          Our Team
         </h2>
       </div>
       <div className="md:grid md:grid-cols-3 gap-2 items-center py-8 px-4 xl:gap-4 sm:py-16 xl:px-16">
