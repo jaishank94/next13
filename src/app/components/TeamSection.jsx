@@ -148,7 +148,7 @@ const TeamSection = () => {
             <h2 className="text-4xl md:text-6xl text-black font-medium">
               Request Demo
             </h2>
-            <p className="text-sm md:text-base font-light text-black lg:text-lg py-16 border-b-2 border-gray-500">
+            <p className="text-sm md:text-base font-light text-black lg:text-lg py-16">
               CLST: The Institutional Credit Liquidity Hub For Digital Assets
             </p>
           </div>
