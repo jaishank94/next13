@@ -34,17 +34,17 @@ const EmailSection = () => {
             The Institutional Credit Liquidity Hub For Digital Assets
           </p>
           <div className="socials flex flex-row gap-4">
-            <Link href="github.com">
+            <Link href="https://twitter.com/CLSTofficial" target="_blank">
               {/* <Image src={GithubIcon} alt="Github Icon" /> */}
-              <BsTwitter size={20} />
+              <BsTwitter size={20} color={"white"} />
             </Link>
-            <Link href="linkedin.com">
+            <Link href="https://www.linkedin.com/company/clst/" target="_blank">
               {/* <Image src={LinkedinIcon} alt="Linkedin Icon" /> */}
-              <BsLinkedin size={20} />
+              <BsLinkedin size={20} color={"white"} />
             </Link>
-            <Link href="linkedin.com">
+            <Link href="https://medium.com/@CLSTofficial" target="_blank">
               {/* <Image src={LinkedinIcon} alt="Linkedin Icon" /> */}
-              <BsMedium size={20} />
+              <BsMedium size={20} color={"white"} />
             </Link>
           </div>
         </div>
