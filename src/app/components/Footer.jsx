@@ -23,12 +23,12 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="footer bg-black text-white px-4 md:px-24 py-12 ">
+    <footer className="footer bg-black text-white px-4 md:px-24 pb-12 ">
       <div className="">
         {/* <span>LOGO</span>
         <p className="text-slate-600">All rights reserved.</p> */}
-        <hr className="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr>
-        <div className="flex flex-col md:flex-row justify-between">
+        {/* <hr className="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr> */}
+        {/* <div className="flex flex-col md:flex-row justify-between">
           <div className="" id="navbar">
             <span className="text-gray-400 uppercase font-semibold">
               Company
@@ -73,12 +73,12 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
         <hr className="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr>
         <div className="w-full flex flex-row justify-center ">
           <span className="text-md font-light">
-            Copyright © CLST | All rights reserved
+            © {new Date().getFullYear()} CLST All rights reserved
           </span>
         </div>
       </div>

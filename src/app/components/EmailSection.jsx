@@ -4,13 +4,33 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { BsLinkedin, BsMedium, BsTwitter } from "react-icons/bs";
+import NavLink from "./NavLink";
+
+const navLinks = [
+  {
+    title: "Markets",
+    path: "/#markets",
+  },
+  {
+    title: "Mission",
+    path: "/#mission",
+  },
+  {
+    title: "Services",
+    path: "/#services",
+  },
+  {
+    title: "Team",
+    path: "/#team",
+  },
+];
 
 const EmailSection = () => {
   return (
     <section id="contact" className="px-12 md:px-24 py-12 relative bg-black">
-      <div className="grid  md:grid-cols-2  gap-4">
+      <div className="">
         {/* <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div> */}
-        <div className="z-10 pt-12">
+        <div className="w-full z-10 pt-12 flex flex-row items-center justify-between">
           {/* <h5 className="text-xl font-bold text-white my-2">
           Let`&apos;s Connect
         </h5> */}
@@ -30,9 +50,9 @@ const EmailSection = () => {
             </div>
             <span className="font-light text-lg md:text-3xl">CLST</span>
           </Link>
-          <p className="text-[#ADB7BE] text-sm mb-4 max-w-md mt-4">
+          {/* <p className="text-[#ADB7BE] text-sm mb-4 max-w-md mt-4">
             The Institutional Credit Liquidity Hub For Digital Assets
-          </p>
+          </p> */}
           <div className="socials flex flex-row gap-4">
             <Link href="https://twitter.com/CLSTofficial" target="_blank">
               {/* <Image src={GithubIcon} alt="Github Icon" /> */}
@@ -46,6 +66,52 @@ const EmailSection = () => {
               {/* <Image src={LinkedinIcon} alt="Linkedin Icon" /> */}
               <BsMedium size={20} color={"white"} />
             </Link>
+          </div>
+        </div>
+        <div className="pt-4 flex flex-col md:flex-row justify-between">
+          <div className="">
+            {/* <span className="text-gray-400 uppercase font-semibold">Legal</span> */}
+            <ul className="flex flex-row">
+              <li className="text-md cursor-pointer font-light">
+                <Link
+                  href={"/legals/#privacy"}
+                  className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li className="mx-2 text-md cursor-pointer font-light">
+                <Link
+                  href={"/legals/#cookie"}
+                  className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
+                >
+                  Cookie Policy
+                </Link>
+              </li>
+              <li className="mx-2 text-md cursor-pointer font-light">
+                <Link
+                  href={"/legals/#termsandconditions"}
+                  className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
+                >
+                  Terms and Conditions
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="" id="navbar">
+            {/* <span className="text-gray-400 uppercase font-semibold">
+              Company
+            </span> */}
+
+            <div className="flex flex-row items-center justify-end ">
+              <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+                {navLinks.map((link, index) => (
+                  <li key={index}>
+                    <NavLink href={link.path} title={link.title} />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         {/* <div className="z-10 mt-12 md:mt-0">
