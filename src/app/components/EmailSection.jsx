@@ -74,7 +74,8 @@ const EmailSection = () => {
             <ul className="flex flex-row">
               <li className="text-md cursor-pointer font-light">
                 <Link
-                  href={"/legals/#privacy"}
+                  // href={"/legals/#privacy"}
+                  href="#"
                   className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Privacy Policy
@@ -82,7 +83,8 @@ const EmailSection = () => {
               </li>
               <li className="mx-2 text-md cursor-pointer font-light">
                 <Link
-                  href={"/legals/#cookie"}
+                  // href={"/legals/#cookie"}
+                  href="#"
                   className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Cookie Policy
@@ -90,7 +92,8 @@ const EmailSection = () => {
               </li>
               <li className="mx-2 text-md cursor-pointer font-light">
                 <Link
-                  href={"/legals/#termsandconditions"}
+                  // href={"/legals/#termsandconditions"}
+                  href="#"
                   className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Terms and Conditions
