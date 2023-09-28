@@ -52,11 +52,13 @@ const MissionSection = () => {
 
   return (
     <section className="bg-gray-100 px-4 md:px-16 pb-24" id="mission">
-      <div className="bg-black text-white py-28">
+      <div className=" text-white py-28">
         <div className="pt-12 md:pt-24 flex flex-col px-8 md:px-16 text-4xl font-medium">
           {/* <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr> */}
-          <h2 className="text-4xl md:text-6xl font-medium">Mission</h2>
-          <p className="text-sm md:text-base text-gray-200 tracking-wide font-light  lg:text-lg py-16 border-b-2 border-gray-500">
+          <h2 className="text-4xl md:text-6xl text-black font-medium">
+            Mission
+          </h2>
+          <p className="text-sm md:text-base text-gray-700 tracking-wide font-light  lg:text-lg py-16 border-b-2 border-gray-500">
             CLST connects institutional lenders and borrowers via curated,
             risk-managed credit channels, enabling the pursuit of
             yield-generating opportunities. As a peer-to-peer agent lending
