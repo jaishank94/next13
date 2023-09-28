@@ -58,7 +58,7 @@ const PricingSection = () => {
       <div className="md:pt-24 h-full">
         <div className="mt-8 px-4 md:px-24 mx-auto" x-data="{ annual: true }">
           {/* <hr className="w-48 h-0.5  my-4 bg-black border-0 rounded md:my-10"></hr> */}
-          <h2 className="text-4xl md:pl-14 md:text-6xl text-black font-medium mb-12">
+          <h2 className="text-4xl md:pl-0 md:text-6xl text-black font-medium mb-12">
             Services
           </h2>
 
