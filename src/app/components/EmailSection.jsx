@@ -42,14 +42,14 @@ const EmailSection = () => {
             <div>
               <div className="flex flex-row items-center">
                 <div className="mr-2 ">
-                  {/* <Image
+                  <Image
                     src="/images/logo.png"
                     alt="hero image"
                     className=""
                     width={30}
                     height={30}
-                  />{" "} */}
-                  <BsCircle color="white" />
+                  />{" "}
+                  {/* <BsCircle color="white" /> */}
                 </div>
 
                 <span className="font-light text-lg md:text-3xl">CLST</span>
