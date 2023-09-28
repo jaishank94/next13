@@ -82,11 +82,11 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 px-4 md:px-16 pb-12" id="team">
+    <section className="bg-gray-100 px-4 md:px-16 pb-12 pt-24" id="team">
       <div className="pt-16">
-        <hr className="w-16 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10"></hr>
+        {/* <hr className="w-16 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10"></hr> */}
 
-        <h2 className="pt-2 mb-4 flex justify-center text-black text-6xl font-medium ">
+        <h2 className="pt-2 mb-4 flex text-black text-6xl font-medium pl-16">
           Team
         </h2>
       </div>
@@ -95,7 +95,7 @@ const TeamSection = () => {
           return (
             <div
               key={index}
-              className="max-w-sm group cursor-default transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 bg-white m-2 border border-gray-200 shadow-md"
+              className="max-w-sm group cursor-default transition duration-200 ease-in transform sm:hover:scale-105 bg-white m-2 border border-gray-200 shadow-md"
             >
               <div className="w-full flex justify-center items-center pt-4">
                 <Image
@@ -144,7 +144,7 @@ const TeamSection = () => {
       <div className="bg-black text-white py-12" id="requestDemo">
         <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <div>
-            <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr>
+            {/* <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr> */}
             <h2 className="text-4xl md:text-6xl font-medium">Request Demo</h2>
             {/* <p className="text-sm md:text-base font-light text-white lg:text-lg py-16 border-b-2 border-gray-500">
               CLST connects institutional lenders and borrowers via curated,

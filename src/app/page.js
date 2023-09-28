@@ -10,6 +10,7 @@ import MarketSection from "./components/MarketSection";
 import ServiceSection from "./components/ServiceSection";
 import PricingSection from "./components/PricingSection";
 import TeamSection from "./components/TeamSection";
+import MissionSection from "./components/MissionSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <HeroSection />
         <PartnersSection />
         <MarketSection />
+        <MissionSection />
         {/* <ServiceSection /> */}
         <PricingSection />
         <TeamSection />

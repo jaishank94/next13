@@ -51,8 +51,8 @@ const MarketSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 px-4 md:px-16" id="markets">
-      <h2 className="pt-24 mb-4 flex justify-center text-black text-4xl  md:text-6xl font-medium">
+    <section className="bg-gray-100 px-4 md:px-16 pb-24 pt-24" id="markets">
+      <h2 className="pt-24 mb-4 flex text-black text-4xl pl-14 md:text-6xl font-medium">
         Markets
       </h2>
       {/* <hr className="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
@@ -122,20 +122,6 @@ const MarketSection = () => {
             Yields And Streamlined Operations, Bridging The Gap Between
             Institutional Borrowers And Lenders In The Crypto Financial
             Landscape.
-          </p>
-        </div>
-      </div>
-      <div className="bg-black text-white py-12" id="mission">
-        <div className="pt-12 md:pt-24 flex flex-col px-8 md:px-16 text-4xl font-medium">
-          <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr>
-          <h2 className="text-4xl md:text-6xl font-medium">Our mission</h2>
-          <p className="text-sm md:text-base font-light text-white lg:text-lg py-16 border-b-2 border-gray-500">
-            CLST connects institutional lenders and borrowers via curated,
-            risk-managed credit channels, enabling the pursuit of
-            yield-generating opportunities. As a peer-to-peer agent lending
-            marketplace, CLST provides the tools and services to eliminate the
-            information gap between lenders and borrowers in the digital asset
-            space.
           </p>
         </div>
       </div>
