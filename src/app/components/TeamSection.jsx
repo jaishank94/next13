@@ -192,7 +192,7 @@ const TeamSection = () => {
               </div>
               <button
                 type="submit"
-                className="w-fit bg-blue-600 hover:bg-white hover:text-blue-600 text-white font-light py-2.5 px-5 rounded-full"
+                className="w-fit bg-blue-600 hover:bg-black hover:text-white text-white font-light py-2.5 px-5 rounded-full"
               >
                 Send Request
               </button>
