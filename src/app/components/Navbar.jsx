@@ -23,6 +23,10 @@ const navLinks = [
     title: "Team",
     path: "/#team",
   },
+  {
+    title: "Request Access",
+    path: "/#requestDemo",
+  },
 ];
 
 const Navbar = () => {
@@ -60,10 +64,11 @@ const Navbar = () => {
           </div>
         </div>
         <Link
-          href={"/#requestDemo"}
+          href={"https://app.clst.com/"}
+          target="_blank"
           className="ml-4 rounded-full p-3 px-6 bg-blue-600 text-white text-sm font-light hover:text-blue-600 hover:bg-white"
         >
-          Request Demo {"->"}
+          SignIn {"->"}
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
