@@ -39,12 +39,12 @@ export default function Legals() {
     <main className="flex min-h-screen flex-col w-full">
       <Navbar />
       <section className="bg-gray-100 px-4 md:px-16" id="markets">
-        {/* <hr class="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
+        {/* <hr className="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
         <div className="md:grid md:grid-cols-3 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <div className="mt-4 md:mt-0 text-left flex flex-col h-full col-span-1">
             <ul className="flex flex-col">
               <li className="text-md cursor-pointer font-light">
-                <hr class="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
+                <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
                 <Link
                   href={"/legals/#privacy"}
@@ -54,7 +54,7 @@ export default function Legals() {
                 </Link>
               </li>
               <li className="text-md cursor-pointer font-light">
-                <hr class="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
+                <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
                 <Link
                   href={"/legals/#cookie"}
@@ -64,7 +64,7 @@ export default function Legals() {
                 </Link>
               </li>
               <li className="text-md cursor-pointer font-light">
-                <hr class="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
+                <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
                 <Link
                   href={"/legals/#termsandconditions"}
@@ -76,7 +76,7 @@ export default function Legals() {
             </ul>
           </div>
           <div className="mt-12 md:mt-4 md:mt-0 text-left flex flex-col h-full col-span-2">
-            {/* <hr class="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr> */}
+            {/* <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr> */}
 
             <div id="privacy">
               <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
@@ -98,7 +98,7 @@ export default function Legals() {
               </p>
             </div>
             <div id="cookie">
-              <hr class="w-full h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
+              <hr className="w-full h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
 
               <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
                 Cookie Policy
@@ -119,7 +119,7 @@ export default function Legals() {
               </p>
             </div>
             <div id="termsandconditions">
-              <hr class="w-full h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
+              <hr className="w-full h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
 
               <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
                 Terms and Conditions

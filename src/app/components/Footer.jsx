@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="">
         {/* <span>LOGO</span>
         <p className="text-slate-600">All rights reserved.</p> */}
-        <hr class="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr>
+        <hr className="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr>
         <div className="flex flex-col md:flex-row justify-between">
           <div className="" id="navbar">
             <span className="text-gray-400 uppercase font-semibold">
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr class="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr>
+        <hr className="w-full h-0.5 mx-auto my-4 bg-gray-600 border-0 rounded md:my-10"></hr>
         <div className="w-full flex flex-row justify-center ">
           <span className="text-md font-light">
             Copyright © CLST | All rights reserved

@@ -45,7 +45,7 @@ const ServiceSection = () => {
     <section className="bg-white px-4 md:px-16 py-12" id="services">
       <div className=" md:grid md:grid-cols-3 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-28 xl:px-16">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <hr class="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
+          <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
           <h2 className="text-6xl font-medium text-black mb-4">Our Services</h2>
         </div>
@@ -55,7 +55,7 @@ const ServiceSection = () => {
               className="group mt-4 md:mt-0 text-left flex flex-col h-full hover:bg-black hover:text-white p-4 cursor-default transition duration-200 ease-in "
               key={index}
             >
-              <hr class="w-12 h-0.5 my-4 bg-black border-0 rounded md:my-10 group-hover:bg-white"></hr>
+              <hr className="w-12 h-0.5 my-4 bg-black border-0 rounded md:my-10 group-hover:bg-white"></hr>
 
               <h2 className="text-xl font-medium text-black mb-4 group-hover:text-white">
                 {service.title}

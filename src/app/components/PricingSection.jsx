@@ -57,7 +57,7 @@ const PricingSection = () => {
           <h2 className="text-6xl text-black font-medium text-center text-white mb-12">
             Awesome Services
           </h2>
-          <hr class="w-48 h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
+          <hr className="w-48 h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
 
           <div className="py-12 grid grid-cols-12 gap-6">
             <div className="relative col-span-full md:col-span-6 bg-black shadow-md rounded-sm border border-slate-800">

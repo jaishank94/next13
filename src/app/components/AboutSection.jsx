@@ -55,7 +55,7 @@ const AboutSection = () => {
       <h2 className="pt-24 mb-4 flex justify-center text-4xl font-medium">
         Markets
       </h2>
-      {/* <hr class="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
+      {/* <hr className="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* <Image src="/images/about-image.png" width={500} height={500} /> */}
         {/* <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
@@ -98,7 +98,7 @@ const AboutSection = () => {
           </div>
         </div> */}
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <hr class="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
+          <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
           <h2 className="text-4xl font-medium text-black mb-4">
             Private Credit
@@ -111,7 +111,7 @@ const AboutSection = () => {
           </p>
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <hr class="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
+          <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
 
           <h2 className="text-4xl font-medium text-black mb-4">
             Crypto Money Markets

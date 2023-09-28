@@ -144,7 +144,7 @@ const TeamSection = () => {
       <div className="bg-black text-white py-12" id="requestDemo">
         <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <div>
-            <hr class="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr>
+            <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr>
             <h2 className="text-4xl md:text-6xl font-medium">Request Demo</h2>
             {/* <p className="text-sm md:text-base font-light text-white lg:text-lg py-16 border-b-2 border-gray-500">
               CLST connects institutional lenders and borrowers via curated,
