@@ -3,7 +3,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
-import { BsLinkedin, BsMedium, BsTwitter } from "react-icons/bs";
+import { BsLinkedin, BsMedium, BsTwitter, BsCircle } from "react-icons/bs";
 import NavLink from "./NavLink";
 
 const navLinks = [
@@ -39,20 +39,26 @@ const EmailSection = () => {
             href={"/"}
             className="flex flex-row text-lg items-center md:text-2xl text-white"
           >
-            <div className="mr-2 ">
-              <Image
-                src="/images/logo.png"
-                alt="hero image"
-                className=""
-                width={30}
-                height={30}
-              />{" "}
+            <div>
+              <div className="flex flex-row items-center">
+                <div className="mr-2 ">
+                  {/* <Image
+                    src="/images/logo.png"
+                    alt="hero image"
+                    className=""
+                    width={30}
+                    height={30}
+                  />{" "} */}
+                  <BsCircle color="white" />
+                </div>
+
+                <span className="font-light text-lg md:text-3xl">CLST</span>
+              </div>
+              <p className="text-[#ADB7BE] text-sm mb-4  mt-4">
+                The Institutional Credit Liquidity Hub For Digital Assets
+              </p>
             </div>
-            <span className="font-light text-lg md:text-3xl">CLST</span>
           </Link>
-          {/* <p className="text-[#ADB7BE] text-sm mb-4 max-w-md mt-4">
-            The Institutional Credit Liquidity Hub For Digital Assets
-          </p> */}
           <div className="socials flex flex-row gap-4">
             <Link href="https://twitter.com/CLSTofficial" target="_blank">
               {/* <Image src={GithubIcon} alt="Github Icon" /> */}
@@ -76,6 +82,7 @@ const EmailSection = () => {
                 <Link
                   // href={"/legals/#privacy"}
                   href="#"
+                  className="text-white"
                   // className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Privacy Policy
@@ -85,6 +92,8 @@ const EmailSection = () => {
                 <Link
                   // href={"/legals/#cookie"}
                   href="#"
+                  className="text-white"
+
                   // className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Cookie Policy
@@ -94,6 +103,8 @@ const EmailSection = () => {
                 <Link
                   // href={"/legals/#termsandconditions"}
                   href="#"
+                  className="text-white"
+
                   // className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
                 >
                   Terms and Conditions

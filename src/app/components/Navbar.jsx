@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import { BsLinkedin, BsMedium, BsTwitter, BsCircle } from "react-icons/bs";
 
 const navLinks = [
   {
@@ -41,13 +42,14 @@ const Navbar = () => {
             className="flex flex-row text-lg items-center md:text-2xl text-white"
           >
             <div className="mr-2 ">
-              <Image
+              {/* <Image
                 src="/images/logo.png"
                 alt="hero image"
                 className=""
                 width={30}
                 height={30}
-              />{" "}
+              />{" "} */}
+              <BsCircle />
             </div>
             <span className="font-light text-lg md:text-3xl">CLST</span>
           </Link>

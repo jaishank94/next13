@@ -148,10 +148,10 @@ const TeamSection = () => {
             <h2 className="text-4xl md:text-6xl text-black font-medium">
               Request Access
             </h2>
-            <p className="text-sm md:text-base font-light text-black lg:text-lg py-16">
+            {/* <p className="text-sm md:text-base font-light text-black lg:text-lg py-16">
               <span className="font-normal">CLST</span>: The Institutional
               Credit Liquidity Hub For Digital Assets
-            </p>
+            </p> */}
           </div>
           <div className=" mt-12 md:mt-0">
             <form className="flex flex-col">
