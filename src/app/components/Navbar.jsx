@@ -53,7 +53,7 @@ const Navbar = () => {
             </div>
             <span className="font-light text-lg md:text-3xl">CLST</span>
           </Link>
-          <div className="menu hidden md:block md:w-auto ml-10" id="navbar">
+          <div className="menu hidden lg:block md:w-auto ml-10" id="navbar">
             <div className="flex flex-row items-center justify-end ">
               <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
                 {navLinks.map((link, index) => (
@@ -65,29 +65,31 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <Link
-          href={"https://app.clst.com/"}
-          target="_blank"
-          className="ml-4 rounded-full p-3 px-6 bg-blue-600 text-white text-sm font-light hover:text-blue-600 hover:bg-white"
-        >
-          SignIn {"->"}
-        </Link>
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border-none rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border-none rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
+        <div className="flex flex-row items-center">
+          <Link
+            href={"https://app.clst.com/"}
+            target="_blank"
+            className="ml-4 rounded-full md:p-3 md:px-6 p-2 px-4 bg-blue-600 text-white text-sm font-light hover:text-blue-600 hover:bg-white"
+          >
+            SignIn {"->"}
+          </Link>
+          <div className="mobile-menu block lg:hidden">
+            {!navbarOpen ? (
+              <button
+                onClick={() => setNavbarOpen(true)}
+                className="flex items-center px-3 py-2 border-none rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              >
+                <Bars3Icon className="h-5 w-5" />
+              </button>
+            ) : (
+              <button
+                onClick={() => setNavbarOpen(false)}
+                className="flex items-center px-3 py-2 border-none rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              >
+                <XMarkIcon className="h-5 w-5" />
+              </button>
+            )}
+          </div>
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
