@@ -8,12 +8,12 @@ import NavLink from "./NavLink";
 
 const navLinks = [
   {
-    title: "Markets",
-    path: "/#markets",
-  },
-  {
     title: "Mission",
     path: "/#mission",
+  },
+  {
+    title: "Markets",
+    path: "/#markets",
   },
   {
     title: "Services",

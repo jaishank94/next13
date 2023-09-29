@@ -9,12 +9,12 @@ import { BsLinkedin, BsMedium, BsTwitter, BsCircle } from "react-icons/bs";
 
 const navLinks = [
   {
-    title: "Markets",
-    path: "/#markets",
-  },
-  {
     title: "Mission",
     path: "/#mission",
+  },
+  {
+    title: "Markets",
+    path: "/#markets",
   },
   {
     title: "Services",

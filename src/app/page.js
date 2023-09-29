@@ -19,8 +19,8 @@ export default function Home() {
       <div className="">
         <HeroSection />
         <PartnersSection />
-        <MarketSection />
         <MissionSection />
+        <MarketSection />
         {/* <ServiceSection /> */}
         <PricingSection />
         <TeamSection />

@@ -74,7 +74,7 @@ const MarketSection = () => {
           <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10 group-hover:bg-white"></hr>
 
           <h2 className="text-xl md:text-2xl font-medium text-black mb-4 group-hover:text-white">
-            Private Credit
+            Corporate Credit
           </h2>
           <p className="text-md tracking-wide text-gray-600 font-light group-hover:text-white">
             CLST serves as a catalyst for private credit lending opportunities.
@@ -87,7 +87,7 @@ const MarketSection = () => {
           <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10 group-hover:bg-white"></hr>
 
           <h2 className="text-xl md:text-2xl font-medium text-black mb-4 group-hover:text-white">
-            Crypto Money Markets
+            Capital Markets Credit
           </h2>
           <p className="text-md tracking-wide text-gray-600 font-light group-hover:text-white">
             Seamlessly deploy digital capital into curated credit channels,
