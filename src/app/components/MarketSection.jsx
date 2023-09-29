@@ -51,7 +51,7 @@ const MarketSection = () => {
   };
 
   return (
-    <section className="bg-[#f6f6f6] px-4 md:px-16 md:pb-24 pt-24" id="markets">
+    <section className="bg-white px-4 md:px-16 md:pb-24 pt-24" id="markets">
       <h2 className="pt-24 mb-4 flex text-black text-4xl pl-4 lg:pl-14 md:text-6xl font-medium">
         Markets
       </h2>

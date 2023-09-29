@@ -41,18 +41,18 @@ const EmailSection = () => {
           >
             <div>
               <div className="flex flex-row items-center">
-                <div className="mr-2 ">
-                  <Image
+                <div className="">
+                  {/* <Image
                     src="/images/logo.png"
                     alt="hero image"
                     className=""
                     width={30}
                     height={30}
-                  />{" "}
+                  />{" "} */}
                   {/* <BsCircle color="white" /> */}
                 </div>
 
-                <span className="font-light text-lg md:text-3xl">CLST</span>
+                <span className="font-semibold text-lg md:text-3xl">CLST</span>
               </div>
               <p className="w-60 md:w-full text-[#ADB7BE] text-sm mb-4  mt-4 break-normal">
                 The Institutional Credit Liquidity Hub For Digital Assets
