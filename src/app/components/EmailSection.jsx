@@ -54,7 +54,7 @@ const EmailSection = () => {
 
                 <span className="font-light text-lg md:text-3xl">CLST</span>
               </div>
-              <p className="text-[#ADB7BE] text-sm mb-4  mt-4">
+              <p className="w-60 md:w-full text-[#ADB7BE] text-sm mb-4  mt-4 break-normal">
                 The Institutional Credit Liquidity Hub For Digital Assets
               </p>
             </div>
