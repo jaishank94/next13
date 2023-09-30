@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
@@ -72,13 +73,37 @@ const TAB_DATA = [
 ];
 
 const TeamSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [organisation, setOrganisation] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
+  const handleSumbit = async (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !organisation || !message) {
+      alert("All fields are required");
+      return;
+    }
+
+    try {
+      const res = await fetch("sadfsdf", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, organisation, message }),
+      });
+
+      if (res.ok) {
+        console.log("successfully submited", res);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setOrganisation("");
+      }
+      console.log("failed submited", res);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -155,9 +180,10 @@ const TeamSection = () => {
           </div>
 
           <div className=" mt-12 md:mt-0">
-            <form className="flex flex-col">
+            <form className="flex flex-col" onSubmit={handleSumbit}>
               <div className="mb-6">
                 <input
+                  onChange={(e) => setName(e.target.value)}
                   type="text"
                   id="email"
                   required
@@ -167,6 +193,7 @@ const TeamSection = () => {
               </div>
               <div className="mb-6">
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   id="subject"
                   required
@@ -176,6 +203,7 @@ const TeamSection = () => {
               </div>
               <div className="mb-6">
                 <input
+                  onChange={(e) => setOrganisation(e.target.value)}
                   type="text"
                   id="organisation"
                   required
@@ -186,6 +214,7 @@ const TeamSection = () => {
 
               <div className="mb-6">
                 <textarea
+                  onChange={(e) => setMessage(e.target.value)}
                   name="message"
                   id="message"
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
