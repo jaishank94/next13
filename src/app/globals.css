@@ -26,3 +26,17 @@ body {
     margin: 0;
   }
 }
+
+/* Splash screen styles */
+.splash-screen {
+  animation: zoom 2s infinite alternate;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

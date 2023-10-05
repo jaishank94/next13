@@ -63,7 +63,7 @@ export default function Legals() {
 
               <div>
                 <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
-                  Loading...
+                  Failed to get the legal information. Please try again.
                 </h2>
                 {/* <div className="text-black break-normal tracking-wide leading-loose">
                   Loading...

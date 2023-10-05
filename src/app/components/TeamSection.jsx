@@ -72,39 +72,60 @@ const TAB_DATA = [
   },
 ];
 
-const TeamSection = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [organisation, setOrganisation] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSumbit = async (e) => {
-    e.preventDefault();
-
-    if (!name || !email || !organisation || !message) {
-      alert("All fields are required");
-      return;
-    }
-
-    try {
-      const res = await fetch("sadfsdf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, organisation, message }),
-      });
-
-      if (res.ok) {
-        console.log("successfully submited", res);
-        setName("");
-        setEmail("");
-        setMessage("");
-        setOrganisation("");
+const fetchTeamData = async () => {
+  try {
+    const teamData = await fetch(
+      "https://newwebsite.clst.com/api/v1/team/getAllTeam",
+      {
+        cache: "no-store",
       }
-      console.log("failed submited", res);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+    );
+
+    const mData = await teamData.json();
+
+    return {
+      teamData: mData.data,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+const TeamSection = async () => {
+  const teamData = await fetchTeamData();
+
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [organisation, setOrganisation] = useState("");
+  // const [message, setMessage] = useState("");
+
+  // const handleSumbit = async (e) => {
+  //   e.preventDefault();
+
+  //   if (!name || !email || !organisation || !message) {
+  //     alert("All fields are required");
+  //     return;
+  //   }
+
+  //   try {
+  //     const res = await fetch("sadfsdf", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ name, email, organisation, message }),
+  //     });
+
+  //     if (res.ok) {
+  //       console.log("successfully submited", res);
+  //       setName("");
+  //       setEmail("");
+  //       setMessage("");
+  //       setOrganisation("");
+  //     }
+  //     console.log("failed submited", res);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   return (
     <section className="bg-white px-4 lg:px-16 pb-12 pt-24" id="team">
@@ -116,31 +137,34 @@ const TeamSection = () => {
         </h2>
       </div>
       <div className="md:grid md:grid-cols-3 gap-2 items-center py-8 px-4 xl:gap-4 sm:py-16 xl:px-16">
-        {teamList.map((team, index) => {
-          return (
-            <div
-              key={index}
-              className="max-w-xl group cursor-default  bg-white m-2 border border-gray-200 shadow-md"
-            >
-              <div className="w-full flex justify-center items-center pt-4 transition duration-200 ease-in transform sm:hover:scale-105">
-                <Image
-                  src={team.value}
-                  alt="hero image"
-                  className=""
-                  width={150}
-                  height={100}
-                />
-              </div>
-              <div className="p-5 flex flex-col justify-center items-center">
-                <a href="#">
-                  <h5 className="mb-2 text-2xl font-normal tracking-tight text-gray-900 ">
-                    {team.name}
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-lg text-gray-500">
-                  {team.position}
-                </p>
-                {/* <a
+        {teamData &&
+          teamData.teamData.data.length > 0 &&
+          teamData.teamData.data.map((team, index) => {
+            if (team.isActive) {
+              return (
+                <div
+                  key={index}
+                  className="max-w-xl group cursor-default  bg-white m-2 border border-gray-200 shadow-md"
+                >
+                  <div className="w-full flex justify-center items-center pt-4 transition duration-200 ease-in transform sm:hover:scale-105">
+                    <Image
+                      src={team.imageUrl}
+                      alt="hero image"
+                      className=""
+                      width={150}
+                      height={100}
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col justify-center items-center">
+                    <a href="#">
+                      <h5 className="mb-2 text-2xl font-normal tracking-tight text-gray-900 ">
+                        {team.name}
+                      </h5>
+                    </a>
+                    <p className="mb-3 font-normal text-lg text-gray-500">
+                      {team.designation}
+                    </p>
+                    {/* <a
                   href="#"
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
@@ -161,22 +185,18 @@ const TeamSection = () => {
                     />
                   </svg>
                 </a> */}
-              </div>
-            </div>
-          );
-        })}
+                  </div>
+                </div>
+              );
+            }
+          })}
       </div>
-      <div className="bg-[#f6f6f6] text-white py-12" id="requestDemo">
+      {/* <div className="bg-[#f6f6f6] text-white py-12" id="requestDemo">
         <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <div>
-            {/* <hr className="w-28 h-0.5 my-4 bg-white border-0 rounded md:my-10"></hr> */}
             <h2 className="text-4xl md:text-6xl text-black font-medium">
               Request Access
             </h2>
-            {/* <p className="text-sm md:text-base font-light text-black lg:text-lg py-16">
-              <span className="font-normal">CLST</span>: The Institutional
-              Credit Liquidity Hub For Digital Assets
-            </p> */}
           </div>
 
           <div className=" mt-12 md:mt-0">
@@ -230,7 +250,7 @@ const TeamSection = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

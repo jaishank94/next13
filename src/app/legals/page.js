@@ -79,21 +79,23 @@ export default async function Legals() {
         {/* <Navbar /> */}
         <section className="bg-gray-100 px-4 md:px-16 py-24" id="markets">
           {/* <hr className="w-28 h-0.5 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700"></hr> */}
-          <div className="px-4 md:px-16">
-            <Link
-              rel="stylesheet"
-              href="/"
-              className="text-black hover:underline"
-            >
-              {"<-"} Back to home
-            </Link>
-          </div>
+
           <div className="md:grid md:grid-cols-3 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-            <div className=" mt-4 md:mt-0 text-left flex flex-col h-full col-span-1">
+            <div className="mt-4 md:mt-0 text-left flex flex-col h-full col-span-1 left-0 relative">
+              {/* Content of the fixed sidebar */}
+
               <ul className="flex flex-col">
+                <div className="py-8">
+                  <Link
+                    rel="stylesheet"
+                    href="/"
+                    className="text-black hover:underline"
+                  >
+                    {"<-"} Back to home
+                  </Link>
+                </div>
                 <li className="text-md cursor-pointer font-light">
                   <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
-
                   <Link
                     href={"/legals/#privacy"}
                     className="block py-2 pl-3 pr-4 text-black text-2xl font-medium rounded md:p-0 hover:text-[#ADB7BE]"
@@ -103,7 +105,6 @@ export default async function Legals() {
                 </li>
                 <li className="text-md cursor-pointer font-light">
                   <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
-
                   <Link
                     href={"/legals/#cookie"}
                     className="block py-2 pl-3 pr-4 text-black text-2xl font-medium rounded md:p-0 hover:text-[#ADB7BE]"
@@ -113,7 +114,6 @@ export default async function Legals() {
                 </li>
                 <li className="text-md cursor-pointer font-light">
                   <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
-
                   <Link
                     href={"/legals/#termsandconditions"}
                     className="block py-2 pl-3 pr-4 text-black text-2xl font-medium rounded md:p-0 hover:text-[#ADB7BE]"
@@ -123,10 +123,9 @@ export default async function Legals() {
                 </li>
               </ul>
             </div>
-            <div className=" mt-12 md:mt-4 md:mt-0 text-left flex flex-col h-full col-span-2">
-              {/* <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr> */}
-
-              <div id="privacy">
+            <div className="mt-12 md:mt-4 md:mt-0 text-left flex flex-col h-full col-span-2">
+              {/* Content of the main section */}
+              <div id="privacy sticky top-0 ">
                 <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
                   Privacy Policy
                 </h2>
@@ -137,9 +136,8 @@ export default async function Legals() {
                     parse(data.privacy.data[0].html)}
                 </div>
               </div>
-              <div id="cookie">
+              <div id="cookie sticky top-0 ">
                 <hr className="w-full h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
-
                 <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
                   Cookie Policy
                 </h2>
@@ -150,9 +148,8 @@ export default async function Legals() {
                     parse(data.cookie.data[0].html)}
                 </div>
               </div>
-              <div id="termsandconditions">
+              <div id="termsandconditions sticky top-0 ">
                 <hr className="w-full h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10"></hr>
-
                 <h2 className="text-2xl md:text-4xl font-medium text-black mb-4">
                   Terms and Conditions
                 </h2>
