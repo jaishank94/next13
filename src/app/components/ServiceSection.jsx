@@ -31,15 +31,35 @@ const serviceList = [
   },
 ];
 
-const ServiceSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+const fetchServiceData = async () => {
+  try {
+    const newsData = await fetch(
+      "https://newwebsite.clst.com/api/v1/mission/get",
+      {
+        cache: "no-store",
+      }
+    );
 
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
+    const mData = await newsData.json();
+
+    if (mData.code !== 200) {
+      console.log("Mission Error");
+      return;
+    }
+
+    return {
+      serviceData:
+        mData.data && mData.data.data && mData.data.data.length > 0
+          ? mData.data.data
+          : null,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+const ServiceSection = async () => {
+  const serviceData = await fetchServiceData();
 
   return (
     <section className="bg-white px-4 md:px-16 py-12" id="services">
@@ -49,23 +69,25 @@ const ServiceSection = () => {
 
           <h2 className="text-6xl font-medium text-black mb-4">Our Services</h2>
         </div>
-        {serviceList.map((service, index) => {
-          return (
-            <div
-              className="group mt-4 md:mt-0 text-left flex flex-col h-full hover:bg-black hover:text-white p-4 cursor-default transition duration-200 ease-in "
-              key={index}
-            >
-              <hr className="w-12 h-0.5 my-4 bg-black border-0 rounded md:my-10 group-hover:bg-white"></hr>
+        {serviceData &&
+          serviceData.serviceData &&
+          serviceData.serviceData.map((service, index) => {
+            return (
+              <div
+                className="group mt-4 md:mt-0 text-left flex flex-col h-full hover:bg-black hover:text-white p-4 cursor-default transition duration-200 ease-in "
+                key={index}
+              >
+                <hr className="w-12 h-0.5 my-4 bg-black border-0 rounded md:my-10 group-hover:bg-white"></hr>
 
-              <h2 className="text-xl font-medium text-black mb-4 group-hover:text-white">
-                {service.title}
-              </h2>
-              <p className="text-sm text-black font-light text-md text-gray-700 lg:text-lg group-hover:text-white">
-                {service.description}
-              </p>
-            </div>
-          );
-        })}
+                <h2 className="text-xl font-medium text-black mb-4 group-hover:text-white">
+                  {service.title}
+                </h2>
+                <p className="text-sm text-black font-light text-md text-gray-700 lg:text-lg group-hover:text-white">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
       </div>
     </section>
   );

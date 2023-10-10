@@ -3,7 +3,13 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
-import { BsLinkedin, BsMedium, BsTwitter, BsCircle } from "react-icons/bs";
+import {
+  BsLinkedin,
+  BsMedium,
+  BsTwitter,
+  BsCircle,
+  BsTelegram,
+} from "react-icons/bs";
 import NavLink from "./NavLink";
 
 const navLinks = [
@@ -25,7 +31,74 @@ const navLinks = [
   },
 ];
 
-const EmailSection = () => {
+const sIcons = {
+  twitter: <BsTwitter size={20} color={"white"} />,
+  linkedin: <BsLinkedin size={20} color={"white"} />,
+  medium: <BsMedium size={20} color={"white"} />,
+  telegram: <BsTelegram size={20} color={"white"} />,
+};
+
+const fetchData = async () => {
+  try {
+    const newsData = await fetch(
+      "https://newwebsite.clst.com/api/v1/logoSlogan/get",
+      {
+        cache: "no-store",
+      }
+    );
+
+    const mData = await newsData.json();
+
+    if (mData.code !== 200) {
+      console.log("Mission Error");
+      return;
+    }
+
+    return {
+      appData:
+        mData.data && mData.data && mData.data.length > 0
+          ? mData.data[0]
+          : null,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+const fetchSocialData = async () => {
+  try {
+    const newsData = await fetch(
+      "https://newwebsite.clst.com/api/v1/social/getAllSocial",
+      {
+        cache: "no-store",
+      }
+    );
+
+    const mData = await newsData.json();
+
+    if (mData.code !== 200) {
+      console.log("Mission Error");
+      return;
+    }
+
+    return {
+      socialData:
+        mData.data &&
+        mData.data &&
+        mData.data.data &&
+        mData.data.data.length > 0
+          ? mData.data.data
+          : null,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+const EmailSection = async () => {
+  const appData = await fetchData();
+  const socialData = await fetchSocialData();
+
   return (
     <section id="contact" className="px-12 md:px-24 py-12 relative bg-black">
       <div className="">
@@ -52,26 +125,36 @@ const EmailSection = () => {
                   {/* <BsCircle color="white" /> */}
                 </div>
 
-                <span className="font-semibold text-lg md:text-3xl">CLST</span>
+                <span className="font-semibold text-lg md:text-3xl">
+                  {appData && appData.appData.alt}
+                </span>
               </div>
               <p className="w-60 md:w-full text-[#ADB7BE] text-sm mb-4  mt-4 break-normal">
-                The Institutional Credit Liquidity Hub For Digital Assets
+                {/* The Institutional Credit Liquidity Hub For Digital Assets */}
+                {appData && appData.appData.slogan}
               </p>
             </div>
           </Link>
           <div className="socials flex flex-row gap-4">
-            <Link href="https://twitter.com/CLSTofficial" target="_blank">
-              {/* <Image src={GithubIcon} alt="Github Icon" /> */}
-              <BsTwitter size={20} color={"white"} />
-            </Link>
-            <Link href="https://www.linkedin.com/company/clst/" target="_blank">
-              {/* <Image src={LinkedinIcon} alt="Linkedin Icon" /> */}
+            {socialData &&
+              socialData.socialData &&
+              socialData.socialData.length &&
+              socialData.socialData.map((val, k) => {
+                if (val.isActive) {
+                  return (
+                    <Link href={val.link} target="_blank" key={k}>
+                      {/* <BsTwitter size={20} color={"white"} /> */}
+                      {sIcons[val.type]}
+                    </Link>
+                  );
+                }
+              })}
+            {/* <Link href="https://www.linkedin.com/company/clst/" target="_blank">
               <BsLinkedin size={20} color={"white"} />
             </Link>
             <Link href="https://medium.com/@CLSTofficial" target="_blank">
-              {/* <Image src={LinkedinIcon} alt="Linkedin Icon" /> */}
               <BsMedium size={20} color={"white"} />
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="pt-4 flex flex-col md:flex-row justify-between">

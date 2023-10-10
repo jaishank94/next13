@@ -1,7 +1,6 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import Image from "next/image";
-import TabButton from "./TabButton";
+import parse from "html-react-parser";
 
 const TAB_DATA = [
   {
@@ -40,15 +39,32 @@ const TAB_DATA = [
   },
 ];
 
-const MissionSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+const fetchMissionData = async () => {
+  try {
+    const newsData = await fetch(
+      "https://newwebsite.clst.com/api/v1/mission/get",
+      {
+        cache: "no-store",
+      }
+    );
 
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
+    const mData = await newsData.json();
+
+    if (mData.code !== 200) {
+      console.log("Mission Error");
+      return;
+    }
+
+    return {
+      missionData: mData.data.length > 0 ? mData.data[0].html : null,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+const MissionSection = async () => {
+  const missionData = await fetchMissionData();
 
   return (
     <section
@@ -62,14 +78,11 @@ const MissionSection = () => {
           <h2 className="text-4xl mb-4 md:text-6xl text-black font-medium group-hover:text-white">
             Mission
           </h2>
-          <p className="mt-4 text-sm md:text-base text-gray-700 tracking-wide font-light  lg:text-lg py-16 group-hover:text-white">
-            CLST connects institutional lenders and borrowers via curated,
-            risk-managed credit channels, enabling the pursuit of
-            yield-generating opportunities. As a peer-to-peer agent lending
-            marketplace, CLST provides the tools and services to eliminate the
-            information gap between lenders and borrowers in the digital asset
-            space.
-          </p>
+          <div className="mt-4 text-sm md:text-base text-gray-700 tracking-wide font-light  lg:text-lg py-16 group-hover:text-white">
+            {missionData &&
+              missionData.missionData &&
+              parse(missionData.missionData)}
+          </div>
         </div>
       </div>
     </section>
