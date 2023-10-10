@@ -13,6 +13,7 @@ import ServiceSection from "./components/ServiceSection";
 import PricingSection from "./components/PricingSection";
 import TeamSection from "./components/TeamSection";
 import MissionSection from "./components/MissionSection";
+import RequestAccess from "./components/RequestAccess";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         {/* <ServiceSection /> */}
         <PricingSection />
         <TeamSection />
+        <RequestAccess />
         {/* <AboutSection /> */}
         {/* <ProjectsSection /> */}
         <EmailSection />

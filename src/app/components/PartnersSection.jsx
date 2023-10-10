@@ -58,7 +58,7 @@ const partnersList = [
 const PartnersSection = () => {
   return (
     <div className="bg-white px-8 md:px-24">
-      <div className="py-12 lg:px-16 flex flex-col sm:flex-row items-center justify-between">
+      {/* <div className="py-12 lg:px-16 flex flex-col sm:flex-row items-center justify-between">
         {partnersList.map((achievement, index) => {
           return (
             <div
@@ -75,6 +75,47 @@ const PartnersSection = () => {
             </div>
           );
         })}
+      </div> */}
+      <div class="w-full py-8 lg:px-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)">
+        <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+          {partnersList.map((achievement, index) => {
+            return (
+              <li
+                key={index}
+                className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+              >
+                <Image
+                  src={achievement.value}
+                  alt="hero image"
+                  className=""
+                  width={150}
+                  height={100}
+                />
+              </li>
+            );
+          })}
+        </ul>
+        <ul
+          class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+          aria-hidden="true"
+        >
+          {partnersList.map((achievement, index) => {
+            return (
+              <li
+                key={index}
+                className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+              >
+                <Image
+                  src={achievement.value}
+                  alt="hero image"
+                  className=""
+                  width={150}
+                  height={100}
+                />
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

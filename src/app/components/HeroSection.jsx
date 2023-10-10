@@ -5,10 +5,36 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const HeroSection = () => {
+const fetchHeroData = async () => {
+  try {
+    const newsData = await fetch(
+      "https://newwebsite.clst.com/api/v1/hero/get",
+      {
+        cache: "no-store",
+      }
+    );
+
+    const mData = await newsData.json();
+
+    if (mData.code !== 200) {
+      console.log("Hero Error");
+      return;
+    }
+
+    return {
+      heroData: mData.data.length > 0 ? mData.data[0] : null,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+const HeroSection = async () => {
+  const heroData = await fetchHeroData();
+
   return (
     <section className="bg-black px-8 md:px-24">
-      <div className="grid grid-cols-1 sm:grid-cols-12 py-12">
+      <div className="grid grid-cols-1 sm:grid-cols-12 py-32 lg:py-12">
         <motion.div
           // initial={{ opacity: 0, scale: 0.5 }}
           // animate={{ opacity: 1, scale: 1 }}
@@ -17,9 +43,9 @@ const HeroSection = () => {
         >
           <h1 className="text-white mb-4 mt-12 text-4xl sm:text-4xl lg:text-7xl lg:leading-normal font-medium">
             <span className="">
-              The Credit Liquidity Hub For{" "}
+              {heroData && heroData.heroData && heroData.heroData.title}{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-no-repeat bg-bottom bg-[length:100%_35px]">
-                Digital Assets
+                {heroData && heroData.heroData && heroData.heroData.highlighted}{" "}
               </span>
             </span>
             <br></br>
@@ -40,7 +66,7 @@ const HeroSection = () => {
             /> */}
           </h1>
           <p className="text-[#ADB7BE] text-lg mb-6">
-            Access deployment opportunities across the entire risk curve
+            {heroData && heroData.heroData && heroData.heroData.description}{" "}
           </p>
           <div>
             {/* <Link
