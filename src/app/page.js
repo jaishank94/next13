@@ -42,8 +42,6 @@ dafaultArrangements.sort(
   (a, b) => secondArrayMap.get(a.type).order - secondArrayMap.get(b.type).order
 );
 
-console.log("dafaultArrangements", dafaultArrangements);
-
 export default function Home() {
   return (
     <main className="flex min-h-screen max-w-8xl flex-col w-full">

@@ -4,103 +4,55 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
-const teamList = [
-  {
-    name: "Michael Guzik",
-    position: "CEO",
-    value: "/images/michael1.png",
-    postfix: "+",
-  },
-  {
-    name: "Hugh Macmillen",
-    position: "CPO",
-
-    metric: "Users",
-    value: "/images/hugh1.png",
-  },
-  {
-    name: "Roshan Robert",
-    value: "/images/roshan.png",
-    position: "President",
-  },
-  {
-    name: "Hassan Al-Lawati",
-    value: "/images/hasan.png",
-    position: "CSO",
-  },
-  {
-    name: "Amit Sinha",
-    value: "/images/amit.png",
-    position: "CTO & CRO",
-  },
-];
-
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
-      </ul>
-    ),
-  },
-];
-
 const RequestAccess = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [organisation, setOrganisation] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSumbit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    // console.log("asdkhfbs1122akdhfb", e);
+    // // return;
 
-    if (!name || !email || !organisation || !message) {
+    const data = {
+      name: e.target.name.value,
+      org: e.target.organisation.value,
+      email: e.target.email.value,
+      msg: e.target.message.value,
+    };
+    const JSONdata = JSON.stringify(data);
+
+    if (
+      !e.target.name.value ||
+      !e.target.email.value ||
+      !e.target.organisation.value ||
+      !e.target.message.value
+    ) {
       alert("All fields are required");
       return;
     }
 
     try {
-      const res = await fetch("sadfsdf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, organisation, message }),
-      });
+      const res = await fetch(
+        "https://newwebsite.clst.com/api/v1/requestAccess/addRequestAccess",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTE2ZDdlYjY4YTQwOGY5MGY3ZWI0YmIiLCJpYXQiOjE2OTYwNjE4OTYsImV4cCI6MTcwMzgzNzg5Nn0.Cyt-bDIWAavKl-e61YDIgwURWhZun6xp1J0VKayyX_w",
+          },
+          body: JSONdata,
+        }
+      );
 
-      if (res.ok) {
-        console.log("successfully submited", res);
-        setName("");
-        setEmail("");
-        setMessage("");
-        setOrganisation("");
+      console.log("asdkhfbs1122akdhfb");
+
+      const resData = await res.json();
+      if (resData.code !== 200) {
+        alert("Failed to add request access.Please try again");
+
+        return;
       }
-      console.log("failed submited", res);
+      console.log("asdkh22222fbs1122akdhfb");
+
+      alert("Saved request access");
     } catch (err) {
       console.error(err);
     }
@@ -120,12 +72,12 @@ const RequestAccess = () => {
           </div>
 
           <div className=" mt-12 md:mt-0">
-            <form className="flex flex-col" onSubmit={handleSumbit}>
+            <form className="flex flex-col" onSubmit={handleSubmit}>
               <div className="mb-6">
                 <input
-                  onChange={(e) => setName(e.target.value)}
                   type="text"
-                  id="email"
+                  id="name"
+                  name="name"
                   required
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Name"
@@ -133,9 +85,9 @@ const RequestAccess = () => {
               </div>
               <div className="mb-6">
                 <input
-                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
-                  id="subject"
+                  id="email"
+                  name="email"
                   required
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Email"
@@ -143,9 +95,9 @@ const RequestAccess = () => {
               </div>
               <div className="mb-6">
                 <input
-                  onChange={(e) => setOrganisation(e.target.value)}
                   type="text"
                   id="organisation"
+                  name="organisation"
                   required
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Organisation"
@@ -154,7 +106,6 @@ const RequestAccess = () => {
 
               <div className="mb-6">
                 <textarea
-                  onChange={(e) => setMessage(e.target.value)}
                   name="message"
                   id="message"
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
@@ -165,7 +116,7 @@ const RequestAccess = () => {
                 type="submit"
                 className="w-fit bg-blue-600 hover:bg-black hover:text-white text-white font-light py-2.5 px-5 rounded-full"
               >
-                Send Request
+                Send Request1
               </button>
             </form>
           </div>

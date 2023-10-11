@@ -69,7 +69,7 @@ const News = async () => {
           <span className="animate-pulse mr-2  font-semibold text-sm lg:text-lg">
             Announcement :
           </span>{" "}
-          <p className="text-sm">{parse(newsData.newsData)}</p>
+          <div className="text-sm">{parse(newsData.newsData)}</div>
         </div>
       )}
     </>

@@ -44,17 +44,17 @@ const Navbar = () => {
               href={"/"}
               className="flex flex-row text-lg items-center md:text-2xl text-white"
             >
-              <div className="">
-                {/* <Image
+              {/* <div className="">
+                <Image
                 src="/images/logo.png"
                 alt="hero image"
                 className=""
                 width={30}
                 height={30}
-              />{" "} */}
-                {/* <BsCircle /> */}
-              </div>
-              <span className="font-semibold text-lg md:text-3xl">CLST</span>
+              />{" "}
+                <BsCircle />
+              </div> */}
+              <p className="font-semibold text-lg md:text-3xl">CLST</p>
             </Link>
             <div className="menu hidden lg:block md:w-auto ml-10" id="navbar">
               <div className="flex flex-row items-center justify-end ">
