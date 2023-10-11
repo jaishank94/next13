@@ -76,8 +76,8 @@ const PartnersSection = () => {
           );
         })}
       </div> */}
-      <div class="w-full py-8 lg:px-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)">
-        <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+      <div className="w-full py-8 lg:px-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)">
+        <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
           {partnersList.map((achievement, index) => {
             return (
               <li
@@ -96,7 +96,7 @@ const PartnersSection = () => {
           })}
         </ul>
         <ul
-          class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+          className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
           aria-hidden="true"
         >
           {partnersList.map((achievement, index) => {
