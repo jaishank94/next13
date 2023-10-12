@@ -55,7 +55,28 @@ const partnersList = [
   },
 ];
 
-const PartnersSection = () => {
+const fetchPartnersData = async () => {
+  try {
+    const partnersData = await fetch(
+      "https://newwebsite.clst.com/api/v1/partner/getAllPartner",
+      {
+        cache: "no-store",
+      }
+    );
+
+    const mData = await partnersData.json();
+
+    return {
+      partnersData: mData.data,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+const PartnersSection = async () => {
+  const partnersData = await fetchPartnersData();
+
   return (
     <div className="bg-white px-8 md:px-24">
       {/* <div className="py-12 lg:px-16 flex flex-col sm:flex-row items-center justify-between">
@@ -78,43 +99,51 @@ const PartnersSection = () => {
       </div> */}
       <div className="w-full py-8 lg:px-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)">
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-          {partnersList.map((achievement, index) => {
-            return (
-              <li
-                key={index}
-                className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-              >
-                <Image
-                  src={achievement.value}
-                  alt="hero image"
-                  className=""
-                  width={150}
-                  height={100}
-                />
-              </li>
-            );
-          })}
+          {partnersData &&
+            partnersData.partnersData.data.length > 0 &&
+            partnersData.partnersData.data.map((partners, index) => {
+              if (partners.isActive) {
+                return (
+                  <li
+                    key={index}
+                    className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+                  >
+                    <Image
+                      src={partners.imageUrl}
+                      alt="hero image"
+                      className=""
+                      width={150}
+                      height={100}
+                    />
+                  </li>
+                );
+              }
+            })}
         </ul>
         <ul
           className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
           aria-hidden="true"
         >
-          {partnersList.map((achievement, index) => {
-            return (
-              <li
-                key={index}
-                className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-              >
-                <Image
-                  src={achievement.value}
-                  alt="hero image"
-                  className=""
-                  width={150}
-                  height={100}
-                />
-              </li>
-            );
-          })}
+          {partnersData &&
+            partnersData.partnersData.data.length > 0 &&
+            partnersData.partnersData.data.map((partners, index) => {
+              if (partners.isActive) {
+                return (
+                  <li
+                    key={index}
+                    className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+                  >
+                    <Image
+                      src={partners.imageUrl}
+                      alt="hero image"
+                      className=""
+                      width={150}
+                      height={100}
+                    />
+                  </li>
+                );
+              }
+            })}
         </ul>
       </div>
     </div>
