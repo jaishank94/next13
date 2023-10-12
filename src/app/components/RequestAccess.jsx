@@ -116,7 +116,7 @@ const RequestAccess = () => {
                 type="submit"
                 className="w-fit bg-blue-600 hover:bg-black hover:text-white text-white font-light py-2.5 px-5 rounded-full"
               >
-                Send Request1
+                Send Request
               </button>
             </form>
           </div>

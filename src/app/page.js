@@ -17,32 +17,59 @@ import RequestAccess from "./components/RequestAccess";
 
 // Two arrays of objects
 const dafaultArrangements = [
-  { sectionName: <PartnersSection />, type: "partner", order: 0 },
-  { sectionName: <MissionSection />, type: "mission", order: 1 },
-  { sectionName: <MarketSection />, type: "market", order: 2 },
-  { sectionName: <PricingSection />, type: "pricing", order: 3 },
-  { sectionName: <TeamSection />, type: "team", order: 4 },
-  { sectionName: <RequestAccess />, type: "requestaccess", order: 5 },
+  { sectionName: <PartnersSection />, section: "partner", order: 0 },
+  { sectionName: <MissionSection />, section: "mission", order: 1 },
+  { sectionName: <MarketSection />, section: "market", order: 2 },
+  { sectionName: <PricingSection />, section: "pricing", order: 3 },
+  { sectionName: <TeamSection />, section: "team", order: 4 },
+  { sectionName: <RequestAccess />, section: "requestaccess", order: 5 },
 ];
 
-const secondArray = [
-  { type: "partner", order: 0 },
-  { type: "mission", order: 1 },
-  { type: "market", order: 2 },
-  { type: "pricing", order: 3 },
-  { type: "team", order: 4 },
-  { type: "requestaccess", order: 5 },
-];
+const fetchPageData = async () => {
+  try {
+    const pageData = await fetch(
+      "https://newwebsite.clst.com/api/v1/arrangement/getAllArrangement",
+      {
+        cache: "no-store",
+      }
+    );
 
-// Create a map for faster lookups
-const secondArrayMap = new Map(secondArray.map((item) => [item.type, item]));
+    const mData = await pageData.json();
 
-// Sort the first array based on the order from the second array
-dafaultArrangements.sort(
-  (a, b) => secondArrayMap.get(a.type).order - secondArrayMap.get(b.type).order
-);
+    if (mData.code !== 200) {
+      console.log("Page Error");
+      return;
+    }
 
-export default function Home() {
+    return {
+      pageData:
+        mData.data &&
+        mData.data &&
+        mData.data.data &&
+        mData.data.data.length > 0
+          ? mData.data.data
+          : null,
+    };
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+export default async function Home() {
+  const pageData = await fetchPageData();
+
+  let dataLayout = null;
+  if (pageData.pageData) {
+    // Create a map for faster lookups
+    dataLayout = new Map(pageData.pageData.map((item) => [item.section, item]));
+
+    // Sort the first array based on the order from the second array
+    dafaultArrangements.sort(
+      (a, b) =>
+        dataLayout.get(a.section).order - dataLayout.get(b.section).order
+    );
+  }
+
   return (
     <main className="flex min-h-screen max-w-8xl flex-col w-full">
       <Navbar />
