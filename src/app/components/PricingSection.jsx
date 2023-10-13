@@ -1,7 +1,5 @@
-"use client";
-import React, { useTransition, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import TabButton from "./TabButton";
 import { BsCheck2 } from "react-icons/bs";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 

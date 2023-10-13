@@ -1,5 +1,4 @@
-"use client";
-import React, { useTransition, useState } from "react";
+import React from "react";
 import parse from "html-react-parser";
 
 const TAB_DATA = [
