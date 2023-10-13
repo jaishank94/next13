@@ -7,7 +7,7 @@ import TabButton from "./TabButton";
 const RequestAccess = () => {
   const [isError, setIsError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [responseMsg, setResponseMsg] = useState("asdfsfd");
+  const [responseMsg, setResponseMsg] = useState("");
   const [isSubmitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
