@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import parse from "html-react-parser";
 
 const TAB_DATA = [
   {
@@ -124,7 +125,7 @@ const MarketSection = async () => {
                     {market.title}
                   </h2>
                   <p className="text-md tracking-wide text-gray-600 font-light group-hover:text-white">
-                    {market.description}
+                    {parse(market.description)}
                   </p>
                 </div>
               );
