@@ -5,10 +5,15 @@ import Image from "next/image";
 import TabButton from "./TabButton";
 
 const RequestAccess = () => {
+  const [isError, setIsError] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("asdfsfd");
+  const [isSubmitting, setSubmitting] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log("asdkhfbs1122akdhfb", e);
-    // // return;
+
+    setSubmitting(true);
 
     const data = {
       name: e.target.name.value,
@@ -24,7 +29,13 @@ const RequestAccess = () => {
       !e.target.organisation.value ||
       !e.target.message.value
     ) {
-      alert("All fields are required");
+      setResponseMsg("All fields are required");
+      setSubmitting(false);
+
+      setTimeout(() => {
+        setResponseMsg("");
+      }, 3000);
+
       return;
     }
 
@@ -42,18 +53,46 @@ const RequestAccess = () => {
         }
       );
 
-      console.log("asdkhfbs1122akdhfb");
-
       const resData = await res.json();
       if (resData.code !== 200) {
-        alert("Failed to add request access.Please try again");
+        setIsError(true);
+
+        setResponseMsg("Failed to send request access. Please try again");
+        setSubmitting(false);
+
+        setTimeout(() => {
+          setResponseMsg("");
+          setIsError(false);
+        }, 3000);
 
         return;
       }
-      console.log("asdkh22222fbs1122akdhfb");
 
-      alert("Saved request access");
+      setIsSuccess(true);
+
+      setResponseMsg("Succesfully! Submitted Access Request.");
+      setSubmitting(false);
+
+      setTimeout(() => {
+        setResponseMsg("");
+        setIsSuccess(false);
+      }, 3000);
+
+      e.target.name.value = "";
+      e.target.organisation.value = "";
+      e.target.email.value = "";
+      e.target.message.value = "";
     } catch (err) {
+      setIsError(true);
+
+      setResponseMsg(err);
+      setSubmitting(false);
+
+      setTimeout(() => {
+        setResponseMsg("");
+        setIsError(false);
+      }, 3000);
+
       console.error(err);
     }
   };
@@ -72,6 +111,15 @@ const RequestAccess = () => {
           </div>
 
           <div className=" mt-12 md:mt-0">
+            {responseMsg !== "" && (
+              <p
+                className={`text-md m-2 drop-shadow-md rounded-md ${
+                  isError ? "text-rose-500" : "text-teal-500"
+                } border-2 bg-white p-2`}
+              >
+                {responseMsg}
+              </p>
+            )}
             <form className="flex flex-col" onSubmit={handleSubmit}>
               <div className="mb-6">
                 <input
@@ -113,10 +161,11 @@ const RequestAccess = () => {
                 />
               </div>
               <button
+                disabled={isSubmitting}
                 type="submit"
                 className="w-fit bg-blue-600 hover:bg-black hover:text-white text-white font-light py-2.5 px-5 rounded-full"
               >
-                Send Request
+                {isSubmitting ? "Sending Request..." : "Send Request"}
               </button>
             </form>
           </div>
