@@ -129,6 +129,7 @@ const RequestAccess = () => {
                   required
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Name"
+                  maxLength={50}
                 />
               </div>
               <div className="mb-6">
@@ -139,6 +140,7 @@ const RequestAccess = () => {
                   required
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Email"
+                  maxLength={50}
                 />
               </div>
               <div className="mb-6">
@@ -149,11 +151,13 @@ const RequestAccess = () => {
                   required
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
                   placeholder="Organisation"
+                  maxLength={80}
                 />
               </div>
 
               <div className="mb-6">
                 <textarea
+                  maxLength={300}
                   name="message"
                   id="message"
                   className="bg-[#f6f6f6] border-b-2 border-[#33353F] placeholder-[#9CA2A9] text-gray-700 text-xl block w-full p-2.5"
