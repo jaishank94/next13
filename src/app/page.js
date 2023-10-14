@@ -16,7 +16,7 @@ import News from "./components//News";
 
 // Two arrays of objects
 const dafaultArrangements = [
-  { sectionName: <News />, section: "news", order: 0 },
+  { sectionName: <News />, section: "announcement", order: 0 },
   { sectionName: <PartnersSection />, section: "partner", order: 1 },
   { sectionName: <MissionSection />, section: "mission", order: 2 },
   { sectionName: <MarketSection />, section: "market", order: 3 },
