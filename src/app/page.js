@@ -16,12 +16,13 @@ import News from "./components//News";
 
 // Two arrays of objects
 const dafaultArrangements = [
-  { sectionName: <PartnersSection />, section: "partner", order: 0 },
-  { sectionName: <MissionSection />, section: "mission", order: 1 },
-  { sectionName: <MarketSection />, section: "market", order: 2 },
-  { sectionName: <PricingSection />, section: "pricing", order: 3 },
-  { sectionName: <TeamSection />, section: "team", order: 4 },
-  { sectionName: <RequestAccess />, section: "requestaccess", order: 5 },
+  { sectionName: <News />, section: "news", order: 0 },
+  { sectionName: <PartnersSection />, section: "partner", order: 1 },
+  { sectionName: <MissionSection />, section: "mission", order: 2 },
+  { sectionName: <MarketSection />, section: "market", order: 3 },
+  { sectionName: <PricingSection />, section: "pricing", order: 4 },
+  { sectionName: <TeamSection />, section: "team", order: 5 },
+  { sectionName: <RequestAccess />, section: "requestaccess", order: 6 },
 ];
 
 const fetchPageData = async () => {
@@ -73,7 +74,6 @@ export default async function Home() {
     <main className="flex min-h-screen max-w-8xl flex-col w-full">
       <Navbar />
       <HeroSection />
-      <News />
       <div className="">
         {dafaultArrangements.map((v, k) => {
           return <div key={k}>{v.sectionName}</div>;
