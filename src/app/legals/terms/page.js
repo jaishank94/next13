@@ -77,11 +77,11 @@ export default async function Legals() {
                     {"<-"} Back to home
                   </Link>
                 </div>
-                <li className="text-md cursor-pointer font-light">
+                <li className="text-md cursor-default font-light">
                   <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10"></hr>
                   <Link
-                    href={"/legals/#termsandconditions"}
-                    className="block py-2 pl-3 pr-4 text-black text-2xl font-medium rounded md:p-0 hover:text-[#ADB7BE]"
+                    href={""}
+                    className="block py-2 pl-3 pr-4 text-black text-2xl font-medium rounded md:p-0"
                   >
                     Terms and Conditions {"->"}
                   </Link>
