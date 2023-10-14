@@ -20,7 +20,7 @@ const dafaultArrangements = [
   { sectionName: <PartnersSection />, section: "partner", order: 1 },
   { sectionName: <MissionSection />, section: "mission", order: 2 },
   { sectionName: <MarketSection />, section: "market", order: 3 },
-  { sectionName: <PricingSection />, section: "pricing", order: 4 },
+  { sectionName: <PricingSection />, section: "service", order: 4 },
   { sectionName: <TeamSection />, section: "team", order: 5 },
   { sectionName: <RequestAccess />, section: "requestaccess", order: 6 },
 ];
