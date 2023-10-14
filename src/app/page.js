@@ -15,6 +15,7 @@ import RequestAccess from "./components/RequestAccess";
 import News from "./components//News";
 
 // Two arrays of objects
+
 const dafaultArrangements = [
   { sectionName: <News />, section: "announcement", order: 0 },
   { sectionName: <PartnersSection />, section: "partner", order: 1 },
