@@ -163,7 +163,7 @@ const EmailSection = async () => {
             <ul className="flex flex-row gap-4">
               <li className="text-md cursor-pointer font-light">
                 <Link
-                  href={"/legals/#privacy"}
+                  href={"/legals/privacy"}
                   // href="#"
                   className="text-white"
                   // className="block py-2 pl-3 pr-4 text-white font-light rounded md:p-0 hover:text-[#ADB7BE]"
@@ -173,7 +173,7 @@ const EmailSection = async () => {
               </li>
               <li className="mx-2 text-md cursor-pointer font-light">
                 <Link
-                  href={"/legals/#cookie"}
+                  href={"/legals/cookie"}
                   // href="#"
                   className="text-white"
 
@@ -184,7 +184,7 @@ const EmailSection = async () => {
               </li>
               <li className="mx-2 text-md cursor-pointer font-light">
                 <Link
-                  href={"/legals/#termsandconditions"}
+                  href={"/legals/terms"}
                   // href="#"
                   className="text-white"
 
