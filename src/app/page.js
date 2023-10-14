@@ -1,5 +1,3 @@
-// "use client";
-
 import Image from "next/image";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
@@ -14,6 +12,7 @@ import PricingSection from "./components/PricingSection";
 import TeamSection from "./components/TeamSection";
 import MissionSection from "./components/MissionSection";
 import RequestAccess from "./components/RequestAccess";
+import News from "./components//News";
 
 // Two arrays of objects
 const dafaultArrangements = [
@@ -74,6 +73,7 @@ export default async function Home() {
     <main className="flex min-h-screen max-w-8xl flex-col w-full">
       <Navbar />
       <HeroSection />
+      <News />
       <div className="">
         {dafaultArrangements.map((v, k) => {
           return <div key={k}>{v.sectionName}</div>;
