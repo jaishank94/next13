@@ -100,7 +100,7 @@ const EmailSection = async () => {
   const socialData = await fetchSocialData();
 
   return (
-    <section id="contact" className="px-12 md:px-24 py-12 relative bg-black">
+    <section id="contact" className="px-6 md:px-24 py-12 relative bg-black">
       <div className="">
         {/* <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div> */}
         <div className="w-full z-10 pt-12 flex flex-row items-center justify-between">

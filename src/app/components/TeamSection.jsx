@@ -23,7 +23,7 @@ const teamList = [
   {
     name: "Hassan Al-Lawati",
     value: "/images/hasan.png",
-    position: "CSO",
+    position: "CSO1",
   },
   {
     name: "Amit Sinha",
@@ -141,15 +141,15 @@ const TeamSection = async () => {
               return (
                 <div
                   key={index}
-                  className="max-w-xl group cursor-default  bg-white m-2 border border-gray-200 shadow-md"
+                  className="max-w-xl group cursor-default  bg-white m-2 border border-gray-200 shadow-md transition duration-200 ease-in transform sm:hover:scale-105"
                 >
-                  <div className="w-full flex justify-center items-center pt-4 transition duration-200 ease-in transform sm:hover:scale-105">
+                  <div className="w-full ">
                     <Image
                       src={team.imageUrl}
-                      alt="hero image"
+                      alt={team.name}
                       className=""
-                      width={150}
-                      height={100}
+                      width={400}
+                      height={300}
                     />
                   </div>
                   <div className="p-5 flex flex-col justify-center items-center">

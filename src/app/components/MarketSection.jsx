@@ -115,14 +115,14 @@ const MarketSection = async () => {
               return (
                 <div
                   key={index}
-                  className="group mt-4 md:mt-0 text-left flex flex-col h-full hover:bg-black hover:text-white p-4 cursor-pointer transition duration-200 ease-in"
+                  className="group mt-4 md:mt-0 text-left flex flex-col h-full cursor-pointer transition duration-200 ease-in"
                 >
-                  <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10 group-hover:bg-white"></hr>
+                  <hr className="w-28 h-0.5 my-4 bg-black border-0 rounded md:my-10 "></hr>
 
-                  <h2 className="text-xl md:text-2xl font-medium text-black mb-4 group-hover:text-white">
+                  <h2 className="text-xl md:text-2xl font-medium text-black mb-4">
                     {market.title}
                   </h2>
-                  <p className="text-md tracking-wide text-gray-600 font-light group-hover:text-white">
+                  <p className="text-md tracking-wide text-gray-600 font-light">
                     {parse(market.description)}
                   </p>
                 </div>

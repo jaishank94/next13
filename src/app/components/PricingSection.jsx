@@ -58,13 +58,13 @@ const PricingSection = async () => {
 
   return (
     <section
-      className="flex flex-col antialiased text-gray-600 min-h-screen p-4 bg-[#f6f6f6]"
+      className="flex flex-col antialiased text-gray-600 min-h-screen p-4 bg-black"
       id="services"
     >
       <div className="lg:pt-32 h-full">
         <div className="mt-8 px-4 lg:px-24 mx-auto" x-data="{ annual: true }">
           {/* <hr className="w-48 h-0.5  my-4 bg-black border-0 rounded lg:my-10"></hr> */}
-          <h2 className="text-4xl lg:pl-0 md:text-6xl text-black font-medium mb-12">
+          <h2 className="text-4xl lg:pl-0 md:text-6xl text-white font-medium mb-12">
             Our Services
           </h2>
 
@@ -76,7 +76,7 @@ const PricingSection = async () => {
                   return (
                     <div
                       key={index}
-                      className="group relative col-span-full md:col-span-6 bg-[#f6f6f6] shadow-md rounded-sm hover:bg-black hover:text-white p-4 cursor-pointer transition duration-200 ease-in"
+                      className="group relative col-span-full md:col-span-6 bg-black shadow-md rounded-sm  p-4 cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105"
                     >
                       <div
                         className="absolute top-0 left-0 right-0 h-0.5 bg-black"
@@ -93,7 +93,7 @@ const PricingSection = async () => {
                            <path d="M12 17a.833.833 0 01-.833-.833 3.333 3.333 0 00-3.334-3.334.833.833 0 110-1.666 3.333 3.333 0 003.334-3.334.833.833 0 111.666 0 3.333 3.333 0 003.334 3.334.833.833 0 110 1.666 3.333 3.333 0 00-3.334 3.334c0 .46-.373.833-.833.833z" />
                          </svg>
                        </div> */}
-                          <h3 className="text-3xl text-black font-semibold group-hover:text-white">
+                          <h3 className="text-3xl text-white font-semibold group-hover:text-white">
                             {service.title}
                           </h3>
                         </header>
@@ -115,7 +115,7 @@ const PricingSection = async () => {
                      </button> */}
                       </div>
                       <div className="px-5 pt-4 pb-5">
-                        <div className="text-xl text-black group-hover:text-white font-semibold mb-4">
+                        <div className="text-xl text-white group-hover:text-white font-semibold mb-4">
                           {" What's included?"}
                         </div>
 
@@ -131,12 +131,15 @@ const PricingSection = async () => {
                          >
                            <path d="M10.28 1.28L3.989 7.575 1.695 5.28A1 1 0 00.28 6.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 1.28z" />
                          </svg> */}
-                                  <IoIosCheckmarkCircle
-                                    // color={"bg-blue-600 hover:bg-white"}
-                                    className="mr-2 text-blue-600 group-hover:text-white"
-                                    size={28}
-                                  />
-                                  <div className="text-md text-gray-600 font-normal group-hover:text-white">
+                                  <div>
+                                    <IoIosCheckmarkCircle
+                                      // color={"bg-blue-600 hover:bg-white"}
+                                      className="mr-2 text-white group-hover:text-blue-600"
+                                      size={28}
+                                    />
+                                  </div>
+
+                                  <div className="text-md text-white font-normal">
                                     {dt}
                                   </div>
                                 </li>

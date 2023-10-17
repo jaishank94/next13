@@ -102,10 +102,10 @@ const RequestAccess = () => {
       className="bg-white text-white py-12 flex justify-center align-item-center"
       id="requestDemo"
     >
-      <div className="w-4/5  bg-[#f6f6f6]">
+      <div className="w-4/5  bg-[#1b1b1b]">
         <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
           <div>
-            <h2 className="text-4xl md:text-6xl text-black font-medium">
+            <h2 className="text-4xl md:text-6xl text-white font-medium">
               Request Access
             </h2>
           </div>
